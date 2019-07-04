@@ -1,8 +1,8 @@
 # _Asana_ OMG Microservice
 
 [![Open Microservice Guide](https://img.shields.io/badge/OMG%20Enabled-👍-green.svg?)](https://microservice.guide)
-[![Build Status](https://travis-ci.com/heaptracetechnology/microservice-asana.svg?branch=master)](https://travis-ci.com/heaptracetechnology/microservice-asana)
-[![codecov](https://codecov.io/gh/heaptracetechnology/microservice-asana/branch/master/graph/badge.svg)](https://codecov.io/gh/heaptracetechnology/microservice-asana)
+[![Build Status](https://travis-ci.com/omg-services/asana.svg?branch=master)](https://travis-ci.com/omg-services/asana)
+[![codecov](https://codecov.io/gh/omg-services/asana/branch/master/graph/badge.svg)](https://codecov.io/gh/omg-services/asana)
 
 
 An OMG service for asana, it designed to help teams organize, track, and manage their work.
