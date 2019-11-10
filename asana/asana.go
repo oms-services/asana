@@ -532,18 +532,18 @@ func getMessageUpdates(workspaceID, projectID string, sub Subscribe, existing bo
 	}
 
 	if existing && !isExistingPrinted {
-		resp, err := c.Send(context.Background(), event)
+		resp, evt, err := c.Send(context.Background(), event)
 		if err != nil {
-			log.Printf("failed to send: %v", err)
+			log.Printf("failed to send: %v (%v)", err, evt)
 		}
 		fmt.Printf("Response1: \n%s\n", resp)
 		finalTasks = nil
 		isExistingPrinted = true
 
 	} else if oldTask != nil && finalTask.ID != oldTask.ID {
-		resp, err := c.Send(context.Background(), event)
+		resp, evt, err := c.Send(context.Background(), event)
 		if err != nil {
-			log.Printf("failed to send: %v", err)
+			log.Printf("failed to send: %v (%v)", err, evt)
 		}
 		fmt.Printf("Response2: \n%s\n", resp)
 		oldTask = finalTask
