@@ -1,7 +1,7 @@
 omg: 1
 lifecycle:
   startup:
-    command: ["microservice-asana"]
+    command: ['microservice-asana']
 info:
   version: 1.0.0
   title: Asana
@@ -57,10 +57,10 @@ actions:
           type: string
         owner:
           help: The owner details of project.
-          type: object
+          type: map
         workspace:
           help: The workspace details of project.
-          type: object
+          type: map
         members:
           help: The members list from the project.
           type: list
@@ -115,7 +115,7 @@ actions:
           type: string
         assignee:
           help: The assignee details.
-          type: object
+          type: map
         followers:
           help: The followers list from the project.
           type: list
@@ -124,7 +124,7 @@ actions:
           type: string
         workspace:
           help: The workspace details of project.
-          type: object
+          type: map
   deleteProject:
     help: Delete project.
     http:
@@ -191,7 +191,7 @@ actions:
         required: true
         help: The workspace id to get tasks.
     output:
-      type: list
+      type: object
       contentType: application/json
       properties:
         id:
@@ -199,7 +199,7 @@ actions:
           type: string
         assignee:
           help: The assignee details.
-          type: object
+          type: map
         followers:
           help: The followers list from the project.
           type: list
@@ -208,7 +208,7 @@ actions:
           type: string
         workspace:
           help: The workspace details of project.
-          type: object
+          type: map
   listWorkspace:
     help: List workspace.
     http:
@@ -217,7 +217,7 @@ actions:
       path: /listworkspace
       contentType: application/json
     output:
-      type: list
+      type: object
       contentType: application/json
       properties:
         name:
@@ -248,7 +248,7 @@ actions:
           type: string
         assignee:
           help: The assignee details.
-          type: object
+          type: map
         followers:
           help: The followers list from the project.
           type: list
@@ -257,7 +257,7 @@ actions:
           type: string
         workspace:
           help: The workspace details of project.
-          type: object
+          type: map
   findProject:
     help: Find project.
     http:
@@ -280,7 +280,7 @@ actions:
           type: string
         assignee:
           help: The assignee details.
-          type: object
+          type: map
         followers:
           help: The followers list from the project.
           type: list
@@ -289,7 +289,7 @@ actions:
           type: string
         workspace:
           help: The workspace details of project.
-          type: object
+          type: map
   updateProject:
     help: Update project in asana.
     http:
@@ -331,10 +331,10 @@ actions:
           type: string
         owner:
           help: The owner details of project.
-          type: object
+          type: map
         workspace:
           help: The workspace details of project.
-          type: object
+          type: map
         members:
           help: The members list from the project.
           type: list
@@ -355,7 +355,7 @@ actions:
         required: true
         help: The project id to get all tasks.
     output:
-      type: list
+      type: object
       contentType: application/json
       properties:
         id:
@@ -382,7 +382,9 @@ actions:
             type: boolean
             in: requestBody
             required: true
-            help: Set true to get all existing tasks or false to get only new task added to board after subscription.
+            help:
+              Set true to get all existing tasks or false to get only new task
+              added to board after subscription.
         http:
           port: 3000
           subscribe:
@@ -398,7 +400,7 @@ actions:
               type: string
             assignee:
               help: The assignee details.
-              type: object
+              type: map
             followers:
               help: The followers list from the project.
               type: list
@@ -407,7 +409,7 @@ actions:
               type: string
             workspace:
               help: The workspace details of project.
-              type: object
+              type: map
 environment:
   ACCESS_TOKEN:
     type: string
