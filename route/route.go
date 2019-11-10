@@ -2,7 +2,7 @@ package route
 
 import (
     "github.com/gorilla/mux"
-    asana "github.com/heaptracetechnology/microservice-asana/asana"
+    asana "github.com/oms-services/asana/asana"
     "net/http"
 )
 

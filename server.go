@@ -1,7 +1,7 @@
 package main
 
 import (
-	route "github.com/heaptracetechnology/microservice-asana/route"
+	route "github.com/oms-services/asana/route"
 	"log"
 	"net/http"
 )
